@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\mmo.Domain\mmo.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DTO" />
+      <Folder Include="Exceptions" />
+      <Folder Include="Interfaces\Services" />
+      <Folder Include="Middlewares" />
+      <Folder Include="Parameters" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Languages\Lang.en-US.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Lang.en-US.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Languages\Lang.tr-TR.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Lang.tr-TR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Controllers\TestController.tr-Tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>TestController.tr-Tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Controllers\TestController.en-Us.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>TestController.en-Us.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Languages\Lang.en-US.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Lang.en-US.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Languages\Lang.tr-TR.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Lang.tr-TR.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Controllers\TestController.tr-Tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>TestController.tr-Tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Controllers\TestController.en-Us.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>TestController.en-Us.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
