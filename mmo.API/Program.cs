@@ -1,4 +1,5 @@
 using mmo.Application;
+using mmo.Application.Exceptions;
 using mmo.Infrastructure;
 using mmo.Persistence;
 using Serilog;
@@ -27,8 +28,7 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
-
-    
+    services.AddTransient<UseExceptionMiddleware>();
     services.AddApplicationServices();
     services.AddPersistenceServices(configuration["DbConnection:SQLServer:ConnectionString"]);
     services.AddInfrastructureServices();
@@ -47,7 +47,15 @@ try
         app.UseSwaggerUI();
     }
 
+    app.Use(async (context, task) =>
+    {
+        Console.WriteLine(context.Response.StatusCode);
+        await task.Invoke();
+        Console.WriteLine(context.Response.StatusCode);
+    });
     app.UseHttpsRedirection();
+
+    app.UseMiddleware<UseExceptionMiddleware>();
 
     app.UseStaticFiles();
 

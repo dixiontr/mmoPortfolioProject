@@ -12,7 +12,6 @@
 
     <ItemGroup>
       <Folder Include="DTO" />
-      <Folder Include="Exceptions" />
       <Folder Include="Interfaces\Services" />
       <Folder Include="Middlewares" />
       <Folder Include="Parameters" />

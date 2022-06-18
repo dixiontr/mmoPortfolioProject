@@ -36,6 +36,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>TestController.en-US.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Exceptions.tr-Tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Exceptions.tr-Tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Exceptions.en-US.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Exceptions.en-US.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -58,6 +66,16 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>TestController.en-US.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Exceptions.tr-Tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Exceptions.tr-Tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Exceptions.en-US.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Exceptions.en-US.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

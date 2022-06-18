@@ -6,6 +6,7 @@
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FCore_002Fmmo_002EApplication_002FResources_002FControllers_002FTestController/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FPresentation_002Fmmo_002EAPI_002FResources_002FControllers_002FTestController/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FPresentation_002Fmmo_002EAPI_002FResources_002FExceptions/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FPresentation_002Fmmo_002EAPI_002FResources_002FSharedResource/@EntryIndexedValue">False</s:Boolean>
 	
 	

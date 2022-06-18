@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using mmo.Application.Exceptions;
+using mmo.Application.Exceptions.CustomExceptions;
+using mmo.Application.Wrappers;
+using mmo.Domain.Entities;
 
 namespace mmo.API.Controllers
 {
@@ -17,10 +21,9 @@ namespace mmo.API.Controllers
             _options = options.Value;
         }
         [HttpGet]
-        public string Index()
+        public BaseResponse Index()
         {
-            Console.WriteLine(Request.Headers["Accept-Language"]);
-            return _localizer["deneme"].ToString();
+            throw new Exception();
 
         }
         [HttpGet("alllanguages")]
